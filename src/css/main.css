@@ -8860,6 +8860,7 @@ body {
   color: #000;
 }
 
+/*banner image*/
 #hero {
   background: url("/assets/puzzle.png") no-repeat;
   background-size: cover;
@@ -8872,6 +8873,12 @@ body {
   }
 }
 
+@media (min-width: 950px) {
+  #hero {
+    height: 400px;
+  }
+}
+
 .btn-outline-secondary {
   background: #fff;
 }
@@ -8880,6 +8887,7 @@ body {
   color: #ff5a09;
 }
 
+/*navbar things and stuff*/
 .navbar {
   width: 100%;
   background: rgba(255, 255, 255, 0.4) !important;
@@ -8888,28 +8896,28 @@ body {
   }*/
 }
 
-.navbar .navbar-toggler {
+.navbar-toggler {
   curso: pointer;
   outline: 0;
 }
 
-.navbar .nav-link {
+.nav-link {
   text-transform: uppercase;
   font-weight: bold;
 }
 
-.navbar .nav-item {
+.nav-item {
   padding: 0 1rem;
 }
 
 @media (max-width: 991px) {
-  .navbar .nav-item {
+  .nav-item {
     padding: 0;
   }
 }
 
 @media (max-width: 767px) {
-  .navbar .nav-item .nav-link {
+  .nav-item .nav-link {
     font-weight: normal;
     color: #000 !important;
   }
@@ -8925,6 +8933,7 @@ body {
   }
 }
 
+/* card settings*/
 .fa-circle-background {
   color: #f79320;
 }
@@ -8951,6 +8960,7 @@ body {
   top: 5%;
 }
 
+/*featurette 1 - About Me*/
 .MainContainer {
   perspective: 1px;
   transform-style: preserve-3d;
