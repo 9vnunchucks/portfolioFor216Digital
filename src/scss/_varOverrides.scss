@@ -1,0 +1,22 @@
+/*Custom-Variables
+Copy variables from '_variables.scss' to this file to override default values without modifying source files
+*/
+
+$yellow: #f79320;
+$light-orange: #ff884d;
+$orange: #ff5a09;
+$primary: $orange;
+$secondary: #1A1B1D;
+$spacer: 1rem;
+$spacers: (6: ($spacer*9),
+          custom1: ($spacer*.75)
+            );
+
+
+$brand-primary: $orange;
+
+$link-color: $orange;
+$body-bg: $secondary;
+$font-weight-bold: 900;
+
+$font-family-sans-serif: "Josefin Sans", "Crimson Text", "Raleway", Roboto, "Helvetica Neue", Arial, sans-serif;

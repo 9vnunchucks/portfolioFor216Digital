@@ -1,0 +1,99 @@
+/* main.scss */
+@import "loadOrder";
+
+body{
+  color: $black;
+}
+
+
+#hero {
+  background: url('/assets/puzzle.png') no-repeat;
+  background-size: cover;
+  background-position: 0 50%;
+
+  @media(max-width:400px){
+    background-position: 48% 0%;
+  }
+}
+
+  .btn-outline-secondary {
+    background: $white;
+      &:hover{
+        color: $primary;
+      }
+  }
+
+
+.navbar {
+  width: 100%;
+  background: rgba($white,.4) !important;
+
+  /*@media(max-width:991px) {
+    background: $black !important;
+  }*/
+
+
+  .navbar-toggler {
+    curso: pointer;
+    outline: 0;
+  }
+
+  .nav-link {
+    text-transform:uppercase;
+    font-weight:bold
+  }
+
+  .nav-item {
+    padding: 0 1rem;
+
+    @media(max-width: 991px) {
+      padding:0;
+    }
+
+    .nav-link {
+      @media(max-width: 767px){
+        font-weight:normal;
+        color: $black !important;
+      }
+    }
+  }
+}
+
+.shadows {
+  text-shadow:0px 0px 4px $white;
+    @media (max-width: 400px){
+      text-shadow: 0px 0px 2px;
+    }
+}
+
+.fa-2p50x {
+  font-size:250%;
+}
+
+.card{
+  background: linear-gradient(to top, $light-orange, $orange)
+}
+
+.MainContainer {
+  perspective: 1px;
+  transform-style: preserve-3d;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.ParallaxContainer {
+  display: flex;
+  flex: 1 0 auto;
+  position: relative;
+  height: 100vh;
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+.ContentContainer {
+  display: block;
+  position: relative;
+  background-color: white;
+  z-index: 1;
+}

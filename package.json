@@ -1,0 +1,23 @@
+{
+  "name": "portfolio-for-216-digital",
+  "version": "1.0.0",
+  "description": "portfolio to demonstrate how my skills would benefit 216 Digital",
+  "main": "index.js",
+  "scripts": {
+    "test": " \"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9vnunchucks/portfolioFor216Digital.git"
+  },
+  "author": "RFoltz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/9vnunchucks/portfolioFor216Digital/issues"
+  },
+  "homepage": "https://github.com/9vnunchucks/portfolioFor216Digital#readme",
+  "dependencies": {
+    "bootstrap": "^4.1.1",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.3"
+  }
