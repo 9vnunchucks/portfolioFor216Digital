@@ -66,12 +66,33 @@ body{
     }
 }
 
-.fa-2p50x {
-  font-size:250%;
+
+//font-awesome size changes
+.fa-circle-background{
+  color: $yellow;
 }
 
+.fa-puzzle-piece{
+  font-size: 130%;
+}
+
+.fa-envelope {
+  font-size:115%;
+}
+
+
 .card{
-  background: linear-gradient(to top, $light-orange, $orange)
+  background: linear-gradient(to top, $light-orange, $orange);
+  min-height: 37.5vh;
+}
+
+.circle{
+  height: 25%;
+  width: 50%;
+  background-color: $yellow;
+  border-radius: 50%;
+  position: relative;
+  top: 5%;
 }
 
 .MainContainer {

@@ -8925,12 +8925,30 @@ body {
   }
 }
 
-.fa-2p50x {
-  font-size: 250%;
+.fa-circle-background {
+  color: #f79320;
+}
+
+.fa-puzzle-piece {
+  font-size: 130%;
+}
+
+.fa-envelope {
+  font-size: 115%;
 }
 
 .card {
   background: linear-gradient(to top, #ff884d, #ff5a09);
+  min-height: 37.5vh;
+}
+
+.circle {
+  height: 25%;
+  width: 50%;
+  background-color: #f79320;
+  border-radius: 50%;
+  position: relative;
+  top: 5%;
 }
 
 .MainContainer {
