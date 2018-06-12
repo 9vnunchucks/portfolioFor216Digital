@@ -8,6 +8,7 @@
 /*Custom-Variables
 Copy variables from '_variables.scss' to this file to override default values without modifying source files
 */
+/*parallax Mixins*/
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -8897,7 +8898,7 @@ body {
 }
 
 .navbar-toggler {
-  curso: pointer;
+  cursor: pointer;
   outline: 0;
 }
 
@@ -8960,27 +8961,101 @@ body {
   top: 5%;
 }
 
-/*featurette 1 - About Me*/
-.MainContainer {
-  perspective: 1px;
-  transform-style: preserve-3d;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
+/*about me section - illustrate photoshop/gimp skills*/
+#aboutMe {
+  background: linear-gradient(#dee2e6, rgba(248, 249, 250, 0.3)), url("/assets/wood.jpg") no-repeat;
+  background-size: cover;
+  height: 50vh;
+  position: relative;
+  z-index: -2;
 }
 
-.ParallaxContainer {
-  display: flex;
-  flex: 1 0 auto;
-  position: relative;
-  height: 100vh;
-  transform: translateZ(-1px) scale(2);
+.position-absolute {
+  right: 7%;
+  bottom: -12px;
+  height: 100%;
   z-index: -1;
+  filter: grayscale(80%);
 }
 
-.ContentContainer {
-  display: block;
-  position: relative;
-  background-color: white;
-  z-index: 1;
+@media (max-width: 768px) {
+  .transparency {
+    opacity: .45;
+  }
 }
+
+.text-muted {
+  padding-left: 15px;
+}
+
+@media (max-width: 768px) {
+  .text-muted {
+    display: none;
+  }
+}
+
+/*begin parallax section - qualifications*/
+/*
+#qualifications.order-md-1{
+  //float:left;
+  :nth-child(1) {
+    @include parallax(-.4);
+    top: 5px;
+    left: 5px;
+  }
+}
+
+  :nth-child(2) {
+    @include parallax(.2);
+    top: 7px;
+    left: 15px;
+  }
+  :nth-child(3) {
+    @include parallax(.3);
+    top: 3px;
+    right: 20px;
+  }
+  :nth-child(4) {
+    @include parallax(.1);
+    top: 500px;
+    left: 500px;
+  }
+  :nth-child(5) {
+    @include parallax(-2);
+    top: 2000px;
+    left: 2000px;
+  }
+  :nth-child(6) {
+    @include parallax(.4);
+    top: 600px;
+    left: 300px;
+  }
+  :nth-child(7) {
+    @include parallax(-1);
+    top: 400px;
+    left: 1000px;
+  }
+  :nth-child(8) {
+    @include parallax(-.4);
+    top: 100px;
+    left: 1400px;
+  }
+  :nth-child(9) {
+    @include parallax(.4);
+    top: 900px;
+    left: 500px;
+  }
+  :nth-child(10) {
+    @include parallax(-1);
+    top: 1600px;
+    left: 100px;
+  }
+  padding: 10%;
+  max-width: 40em;
+  margin: auto;
+  > * {
+    position: absolute;
+  }
+}
+*/
+/*featurette 1 - About Me*/
