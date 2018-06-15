@@ -154,11 +154,11 @@ $standardHeight: 60vh;
   :nth-child(3) {
     @include parallax(.3);
     top: 28vh;
-    left: 15vw;
+    left: 18vw;
   }
   :nth-child(4) {
     @include parallax(.4);
-    top: 2vh;
+    top: 10vh;
     left: 35vw;
   }
   :nth-child(5) {
@@ -167,9 +167,9 @@ $standardHeight: 60vh;
     left: -57vw;
   }
   :nth-child(6) {
-    @include parallax(.4);
+    @include parallax(.7);
     top: 18vh;
-    right: 10vh;
+    left: 46vw;
   }
   :nth-child(7) {
     @include parallax(-1);
@@ -183,13 +183,13 @@ $standardHeight: 60vh;
   }
   :nth-child(9) {
     @include parallax(.4);
-    bottom: 60vh;
-    right: 15vw;
+    bottom: 40vh;
+    right: 17vw;
   }
   :nth-child(10) {
     @include parallax(-1);
     top: -20vh;
-    right: 5vh;
+    right: 5vw;
   }
   padding: 10%;
   max-width: 40em;

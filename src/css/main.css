@@ -9052,13 +9052,13 @@ body, body * {
   transform: translateZ(0.3px) scale(0.7);
   z-index: 300;
   top: 28vh;
-  left: 15vw;
+  left: 18vw;
 }
 
 .parallax :nth-child(4) {
   transform: translateZ(0.4px) scale(0.6);
   z-index: 400;
-  top: 2vh;
+  top: 10vh;
   left: 35vw;
 }
 
@@ -9070,10 +9070,10 @@ body, body * {
 }
 
 .parallax :nth-child(6) {
-  transform: translateZ(0.4px) scale(0.6);
-  z-index: 400;
+  transform: translateZ(0.7px) scale(0.3);
+  z-index: 700;
   top: 18vh;
-  right: 10vh;
+  left: 46vw;
 }
 
 .parallax :nth-child(7) {
@@ -9093,15 +9093,15 @@ body, body * {
 .parallax :nth-child(9) {
   transform: translateZ(0.4px) scale(0.6);
   z-index: 400;
-  bottom: 60vh;
-  right: 15vw;
+  bottom: 40vh;
+  right: 17vw;
 }
 
 .parallax :nth-child(10) {
   transform: translateZ(-1px) scale(2);
   z-index: -1000;
   top: -20vh;
-  right: 5vh;
+  right: 5vw;
 }
 
 .parallax > * {
