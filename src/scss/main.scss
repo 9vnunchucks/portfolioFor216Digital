@@ -1,28 +1,30 @@
 /* main.scss */
 @import "loadOrder";
 
-body{
-  color: $black;
-}
+/*vars*/
+$standardHeight: 60vh;
 
+/*heights*/
+.cardHeight{height:40vh;}
+
+.standardHeight {height:$standardHeight;}
+.offsetHeight {height:($standardHeight/.9);}
 /*banner image*/
 #hero {
   background:url('/assets/puzzle.png') no-repeat;
   background-size: cover;
-  background-position: 0 50%;
-
-  @media(max-width:400px){
-    background-position: 48% 0%;
-  }
-  @media(min-width:950px){
-    height:400px;
-  }
+  background-position: 55% 50%;
+  height:410px;
+  overflow-y:hidden;
+    @media(max-width:485px){
+    height: 455px;
+}
 }
 
   .btn-outline-secondary {
     background: $white;
       &:hover{
-        color: $primary;
+        color: $primary
       }
   }
 
@@ -100,16 +102,12 @@ body{
 #aboutMe{
   background:  linear-gradient($gray-300,rgba($gray-100, .3)), url('/assets/wood.jpg') no-repeat;
   background-size: cover;
+  position:absolute;
   height: 50vh;
   position:relative;
   z-index: -2;
 }
 
-// .lost-text{
-//   background: rgba($gray-300, 1);
-//   z-index: -1
-//   //border-radius: 5px;
-// }
 
 .position-absolute{
   right:7%;
@@ -132,27 +130,30 @@ body{
   }
 }
 
-/*begin parallax section - qualifications*/
-//@include parallax-init;
-/*
-#qualifications.order-md-1{
-  //float:left;
+
+
+#qualifications{
+  background: linear-gradient(to top,rgba($white, .4),$blue);
+}
+// /*begin parallax section - qualifications*/
+@include parallax-init;
+
+.parallax {
+  color: $orange;
   :nth-child(1) {
     @include parallax(-.4);
-    top: 5px;
-    left: 5px;
+    top: 10vh;
+    left: 20vw;
   }
-}
-
   :nth-child(2) {
     @include parallax(.2);
-    top: 7px;
-    left: 15px;
+    top: 00px;
+    left: 00px;
   }
   :nth-child(3) {
     @include parallax(.3);
-    top: 3px;
-    right: 20px;
+    top: 400px;
+    left: 600px;
   }
   :nth-child(4) {
     @include parallax(.1);
@@ -196,28 +197,9 @@ body{
     position: absolute;
   }
 }
-*/
-/*featurette 1 - About Me*/
-// .MainContainer {
-//   perspective: 1px;
-//   transform-style: preserve-3d;
-//   height: 100vh;
-//   overflow-x: hidden;
-//   overflow-y: scroll;
-// }
-//
-// .ParallaxContainer {
-//   display: flex;
-//   flex: 1 0 auto;
-//   position: relative;
-//   height: 100vh;
-//   transform: translateZ(-1px) scale(2);
-//   z-index: -1;
-// }
-//
-// .ContentContainer {
-//   display: block;
-//   position: relative;
-//   background-color: white;
-//   z-index: 1;
-// }
+
+
+#additional{
+  background-color: $white;
+  margin-top: -10%;
+}

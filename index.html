@@ -11,12 +11,16 @@
   <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
   <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <!--<link rel="stylesheet" href="/css/bootstrap.css">-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script src='https://www.google.com/recaptcha/api.js'></script>
   <link rel="stylesheet" href="src/css/main.min.css">
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="src/js/main.js"></script>
 </head>
 
 
 <body>
+
   <!--begin navbar-->
   <div id="hero">
     <div class="container-fluid">
@@ -57,9 +61,10 @@
   </div>
 
   <!-- begin cards-->
+
   <div class="container-fluid bg-secondary">
-    <div class="row">
-      <div class="col-sm-4 mt-sm-4 mb-sm-4 mt-2 mb-2">
+    <div class="row mt-md-4 mt-md-3 mt-2 mb-2 ">
+      <div class="col-md-4 cardHeight">
         <div class="card rounded border-white bg-primary">
           <div class="card-body text-center">
             <div class="fa-stack fa-4x">
@@ -72,7 +77,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mt-sm-4 mb-sm-4 my-2">
+      <div class="col-md-4 cardHeight">
         <div class="card rounded border-white bg-primary">
           <div class="card-body text-center ">
             <div class="fa-stack fa-4x">
@@ -85,7 +90,7 @@
           </div>
         </div>
       </div>
-      <div class="col-sm-4 mt-sm-4 mb-sm-4 mt-2 mb-4">
+      <div class="col-md-4 cardHeight">
         <div class="card rounded border-white">
           <div class="card-body text-center">
             <div class="fa-stack fa-4x">
@@ -105,10 +110,9 @@
 
 
   <!-- Featurette 1 - About Me - iphone image-->
-
   <div class="container-fluid">
-    <div class="row featurette" id="aboutMe">
-      <div class="col-md-7">
+    <div class="row featurette featurette1-Height" id="aboutMe">
+      <div class="col-md-6">
         <h2 class="featurette-heading">Introducing R Foltz. <span class="text-muted">It'll blow your mind.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
@@ -119,47 +123,118 @@
     </div> -->
     </div>
     <!-- featurette 2 - qualifications - floating parallax-->
-    <div class="row featurette" id="qualifications">
-      <div class="col-md-6 order-md-2">
+    <div class="row" id="qualifications">
+      <div class="col-md-6 order-md-2 offsetHeight">
         <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
-      <div class="col-md-6 order-md-1">
-        <h1>effective</h1>
-        <h2>knowledgable</h2>
-        <h3>Bootstrap 4</h3>
-      </div>
-    </div>
-
+      <div class="col-md-6 order-md-1 parallax offsetHeight">
+          <h1>hello</h1>
+          <!--<h2>world</h2>
+-->    </div>
+    </div> -->
     <!-- featurette 3 - additional skills - css animation-->
     <div class="row featurette" id="additional">
-      <div class="col-md-7">
+      <div class="col-md-6 standardHeight" >
         <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
         <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
       </div>
-      <div class="col-md-5">
-        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <div class="col-md-6 standardHeight" style="text-align:center; padding-top:5px; padding-bottom:10px;">
+            <svg version="1.1" class="puzzleAnimation" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="145.094 220.598 340.928 341.252"
+            	 enable-background="new 145.094 220.598 340.928 341.252" xml:space="preserve" width="52%" >
+            		 <style>
+            			 .puzzlePiece{
+            			 stroke-dasharray: 1754;
+            			 stroke-dashoffset: 0;
+            			 -webkit-animation: dash 7.2s linear alternate infinite;
+            			 -moz-animation: dash 7.2s linear alternatee infinite;
+            			 -o-animation: dash 7.2s linear alternate infinite;
+            			 animation: dash 7.2s linear alternate infinite;
+            			 }
+            			 /* .puzzlePiece:hover {
+            			 fill:#ff5a09;
+            			 transition: ease-in-out .6s;
+            			 } */
+            				@-webkit-keyframes dash{
+            			 0%,1.5% {
+            			 stroke-dashoffset: 1754;
+                   fill: rgba(255, 255, 255, 0);
+            			 }
+            			 57%{
+            			 stroke-dashoffset: 0;
+                   fill: rgba(255, 255, 255, 0);
+            			 }
+                    82%,100% {
+                      stroke-dashoffset:0;
+                      fill: #ff5a09;
+                    }
+                 }
+            		 		 </style>
+            <path class="puzzlePiece"  fill="rgba(255, 255, 255, 0)" stroke="#333333" stroke-width="5" stroke-linejoin="round" d="M276.987,223.135
+            	c-14.535,0.535-30.838,5.406-39.535,15.837c-12.65,26.955,18.081,14.509,21.695,33.17c3.615,18.661-18.079,19.693-18.079,19.693
+            	h-93.474l0.12,92.697c0,0,1.032,21.693,19.693,18.079c15.163-2.938,9.786-23.791,21.695-24.713
+            	c2.749-0.213,6.421,0.646,11.475,3.018c10.432,8.697,15.303,25,15.837,39.535c0.198,5.366-0.271,10.412-1.195,14.822
+            	c-0.023,0.194-0.064,0.4-0.089,0.598c-1.62,12.54-6.466,25.262-15.271,32.603c-26.955,12.65-14.509-18.081-33.17-21.694
+            	c-13.596-2.635-17.796,8.106-19.095,14.164v98.406l93.802-0.747c0,0,21.693-1.031,18.079-19.691
+            	c-3.614-18.662-34.316-6.216-21.665-33.171c8.697-10.433,24.971-15.304,39.504-15.838c5.366-0.197,10.412,0.271,14.822,1.194
+            	c0.195,0.024,0.401,0.064,0.598,0.09c12.54,1.62,25.292,6.467,32.632,15.271c12.649,26.955-18.081,14.51-21.695,33.171
+            	c-3.614,18.661,18.079,19.692,18.079,19.692l92.936,0.029v-97.624c1.326-6.073,5.55-16.691,19.065-14.074
+            	c18.662,3.614,6.216,34.346,33.171,21.695c8.804-7.341,13.65-20.092,15.271-32.633c0.024-0.195,0.064-0.372,0.09-0.566
+            	c0.924-4.41,1.393-9.456,1.194-14.822c-0.534-14.534-5.405-30.838-15.838-39.535c-26.955-12.65-14.509,18.081-33.17,21.695
+            	c-18.662,3.614-19.692-18.079-19.692-18.079l-0.091-93.563h-97.689c-6.125-1.417-16.222-5.73-13.656-18.976
+            	c3.614-18.661,34.316-6.215,21.665-33.17c-7.341-8.804-20.062-13.65-32.603-15.271c-0.196-0.025-0.402-0.066-0.598-0.089
+            	c-4.41-0.924-9.457-1.393-14.822-1.195L276.987,223.135z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+<!--
+    <div class="group1">
+      <div class="background">
+        <center>I'm an element far away.</center>
+      </div>
+      <div class="foreground">
+        <center>I'm an element close by.</center>
       </div>
     </div>
-  </div>
+    <div class="group1">
+      <div class="background">
+        <center>I'm an element far away.</center>
+      </div>
+      <div class="foreground">
+        <center>I'm an element close by.</center>
+      </div>
+    </div>
+    <div class="group1">
+      <div class="background">
+        <center>I'm an element far away.</center>
+      </div>
+      <div class="foreground">
+        <center>I'm an element close by.</center>
+      </div>
+    </div>
+  -->
 
-
-  <!-- Contact Me form - https post to aws lamba-->
-  <div id="contactMe" class="pt-lg-6 pb-lg-6 pt-5">
+  <!-- Contact Me form - https post method-->
+  <div id="contactMe" class="pt-lg-6 pb-lg-6 pt-4 pb-5">
     <div class="container text-center">
       <h2 class="text-uppercase">You Should Contact Me</h2>
       <h4 class="text-uppercase"></h4>
-      <form action="">
+      <form method="post" action="https://formspree.io/ryan.l.foltz@gmail.com">
         <div class="form-group row pt-lg-5 pb-lg-5 pt-5">
           <div class="offset-1 col-10 text-center">
-            <input type="text" class="form-control mb-4" id="nameInput" aria-describedby="nameHelp" placeholder="Name"></input>
+            <input type="text" class="form-control mb-4" id="nameInput" name="Name" aria-describedby="nameHelp" placeholder="Name">
           </div>
           <div class="offset-1 col-10 text-center">
-            <input type="text" class="form-control mb-4" id="phoneInput" md aria-describedby="phoneHelp" placeholder="Phone Number"></input>
+            <input type="tel" name="Phone Number:" class="form-control mb-4" id="phoneInput" md aria-describedby="phoneHelp" placeholder="Phone Number">
+          </div>
+          <div class="offset-1 col-10 text-center mb-4">
+            <input name="Email:" type="email" class="form-control" id="emailInput" aria-describedby="emailHelp" placeholder="Enter Email">
           </div>
           <div class="offset-1 col-10 text-center">
-            <input type="email" class="form-control mb-4" id="emailInput" aria-describedby="emailHelp" placeholder="Enter Email"></input>
           </div>
+          <!-- insert captcha -->
           <div class="offset-1 col-10 text-center">
             <button type="submit" class="btn btn-primary btn-block text-uppercase bg-primary">Submit!</button>
           </div>
@@ -167,10 +242,11 @@
       </form>
     </div>
   </div>
+</div>
 
   <!-- Github and linkdin links in footer-->
 
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
   <script src="node_modules/popper.js/dist/popper.min.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>

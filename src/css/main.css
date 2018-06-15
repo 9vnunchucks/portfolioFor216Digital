@@ -8,9 +8,8 @@
 /*Custom-Variables
 Copy variables from '_variables.scss' to this file to override default values without modifying source files
 */
-/*parallax Mixins*/
 :root {
-  --blue: #007bff;
+  --blue: #b0d7fc;
   --indigo: #6610f2;
   --purple: #6f42c1;
   --pink: #e83e8c;
@@ -8857,26 +8856,32 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-body {
-  color: #000;
+/*vars*/
+/*heights*/
+.cardHeight {
+  height: 40vh;
+}
+
+.standardHeight {
+  height: 60vh;
+}
+
+.offsetHeight {
+  height: 66.66667vh;
 }
 
 /*banner image*/
 #hero {
   background: url("/assets/puzzle.png") no-repeat;
   background-size: cover;
-  background-position: 0 50%;
+  background-position: 55% 50%;
+  height: 410px;
+  overflow-y: hidden;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 485px) {
   #hero {
-    background-position: 48% 0%;
-  }
-}
-
-@media (min-width: 950px) {
-  #hero {
-    height: 400px;
+    height: 455px;
   }
 }
 
@@ -8965,6 +8970,7 @@ body {
 #aboutMe {
   background: linear-gradient(#dee2e6, rgba(248, 249, 250, 0.3)), url("/assets/wood.jpg") no-repeat;
   background-size: cover;
+  position: absolute;
   height: 50vh;
   position: relative;
   z-index: -2;
@@ -8994,68 +9000,110 @@ body {
   }
 }
 
-/*begin parallax section - qualifications*/
-/*
-#qualifications.order-md-1{
-  //float:left;
-  :nth-child(1) {
-    @include parallax(-.4);
-    top: 5px;
-    left: 5px;
-  }
+#qualifications {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.4), #b0d7fc);
 }
 
-  :nth-child(2) {
-    @include parallax(.2);
-    top: 7px;
-    left: 15px;
-  }
-  :nth-child(3) {
-    @include parallax(.3);
-    top: 3px;
-    right: 20px;
-  }
-  :nth-child(4) {
-    @include parallax(.1);
-    top: 500px;
-    left: 500px;
-  }
-  :nth-child(5) {
-    @include parallax(-2);
-    top: 2000px;
-    left: 2000px;
-  }
-  :nth-child(6) {
-    @include parallax(.4);
-    top: 600px;
-    left: 300px;
-  }
-  :nth-child(7) {
-    @include parallax(-1);
-    top: 400px;
-    left: 1000px;
-  }
-  :nth-child(8) {
-    @include parallax(-.4);
-    top: 100px;
-    left: 1400px;
-  }
-  :nth-child(9) {
-    @include parallax(.4);
-    top: 900px;
-    left: 500px;
-  }
-  :nth-child(10) {
-    @include parallax(-1);
-    top: 1600px;
-    left: 100px;
-  }
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  overflow: auto;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+body, body * {
+  transform-style: preserve-3d;
+}
+
+.parallax {
+  color: #ff5a09;
   padding: 10%;
   max-width: 40em;
   margin: auto;
-  > * {
-    position: absolute;
-  }
 }
-*/
-/*featurette 1 - About Me*/
+
+.parallax :nth-child(1) {
+  transform: translateZ(-0.4px) scale(1.4);
+  z-index: -400;
+  top: 10vh;
+  left: 20vw;
+}
+
+.parallax :nth-child(2) {
+  transform: translateZ(0.2px) scale(0.8);
+  z-index: 200;
+  top: 00px;
+  left: 00px;
+}
+
+.parallax :nth-child(3) {
+  transform: translateZ(0.3px) scale(0.7);
+  z-index: 300;
+  top: 400px;
+  left: 600px;
+}
+
+.parallax :nth-child(4) {
+  transform: translateZ(0.1px) scale(0.9);
+  z-index: 100;
+  top: 500px;
+  left: 500px;
+}
+
+.parallax :nth-child(5) {
+  transform: translateZ(-2px) scale(3);
+  z-index: -2000;
+  top: 2000px;
+  left: 2000px;
+}
+
+.parallax :nth-child(6) {
+  transform: translateZ(0.4px) scale(0.6);
+  z-index: 400;
+  top: 600px;
+  left: 300px;
+}
+
+.parallax :nth-child(7) {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1000;
+  top: 400px;
+  left: 1000px;
+}
+
+.parallax :nth-child(8) {
+  transform: translateZ(-0.4px) scale(1.4);
+  z-index: -400;
+  top: 100px;
+  left: 1400px;
+}
+
+.parallax :nth-child(9) {
+  transform: translateZ(0.4px) scale(0.6);
+  z-index: 400;
+  top: 900px;
+  left: 500px;
+}
+
+.parallax :nth-child(10) {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1000;
+  top: 1600px;
+  left: 100px;
+}
+
+.parallax > * {
+  position: absolute;
+}
+
+#additional {
+  background-color: #fff;
+  margin-top: -10%;
+}
