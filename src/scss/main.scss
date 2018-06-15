@@ -2,12 +2,18 @@
 @import "loadOrder";
 
 /*vars*/
-$standardHeight: 60vh;
+$standardHeight: 55vh;
 /*heights*/
-.cardHeight{height:40vh;}
+.cardHeight{
+  height:40vh;
+}
 
-.standardHeight {height:$standardHeight;}
-.offsetHeight {height:($standardHeight/.9);}
+.standardHeight {
+  height:$standardHeight;
+}
+// .offsetHeight {
+//   height:($standardHeight/.9);
+// }
 /*banner image*/
 #hero {
   background:url('/assets/puzzle.png') no-repeat;
@@ -99,24 +105,22 @@ $standardHeight: 60vh;
 
 /*about me section - illustrate photoshop/gimp skills*/
 #aboutMe{
-  background:  linear-gradient($gray-300,rgba($gray-100, .3)), url('/assets/wood.jpg') no-repeat;
+  background:  linear-gradient($gray-300,rgba($blue, .75)), url('/assets/wood.jpg') no-repeat;
   background-size: cover;
   position:absolute;
-  height: ($standardHeight);
+  height: $standardHeight;
   position:relative;
   z-index: -2;
-    @media (max-width: 768px){
-      height: ($standardHeight*2);
     }
-}
 
 
 .position-absolute{
   right:7%;
-  max-height:60vh;
+  max-height: 50vh;
   z-index: -1;
   filter:grayscale(80%);
-}
+    }
+
 
 .transparency{
   @media(max-width:768px){
@@ -125,11 +129,12 @@ $standardHeight: 60vh;
 }
 
 .text-muted{
-  padding-left: 15px;
-  @media(max-width:768px){
+  font-size: 1.4rem;
+    @media(max-width:768px){
     display: none;
   }
 }
+
 
 
 
@@ -140,6 +145,7 @@ $standardHeight: 60vh;
 @include parallax-init;
 
 .parallax {
+  text-align: center;
   color: $orange;
   :nth-child(1) {
     @include parallax(-.4);
@@ -148,48 +154,48 @@ $standardHeight: 60vh;
   }
   :nth-child(2) {
     @include parallax(.2);
-    top: 13vh;
+    top: 25vh;
     left: 10vw;
   }
   :nth-child(3) {
     @include parallax(.3);
-    top: 28vh;
-    left: 18vw;
+    top: 42vh;
+    left: 26vw;
   }
   :nth-child(4) {
-    @include parallax(.4);
+    @include parallax(.2);
     top: 10vh;
-    left: 35vw;
+    left: 10vw;
   }
   :nth-child(5) {
-    @include parallax(-2);
-    top: -20vh;
-    left: -57vw;
+    @include parallax(.6);
+    top: 25vh;
+    left: 48vw;
   }
   :nth-child(6) {
-    @include parallax(.7);
-    top: 18vh;
-    left: 46vw;
+    @include parallax(.5);
+    top: 30vh;
+    right: 20vw;
   }
   :nth-child(7) {
     @include parallax(-1);
-    top: 30vh;
+    top: 27vh;
     right: 5vw;
   }
   :nth-child(8) {
     @include parallax(-.4);
-    top: 2vh;
-    right: 28vw;
+    top: 25vh;
+    right: 30vw;
   }
   :nth-child(9) {
     @include parallax(.4);
     bottom: 40vh;
-    right: 17vw;
+    right: 20vw;
   }
   :nth-child(10) {
     @include parallax(-1);
-    top: -20vh;
-    right: 5vw;
+    top: -10vh;
+    left: -10vw;
   }
   padding: 10%;
   max-width: 40em;
@@ -201,6 +207,17 @@ $standardHeight: 60vh;
 
 
 #additional{
-  background-color: $white;
-  margin-top: -10%;
+  background:  linear-gradient(to bottom,rgba($white, .4), $orange);
+  color: $white;}
+
+  .text-muted2{
+    color: $gray-400;
+    font-size: 1.4rem;
+      @media(max-width:768px){
+      display: none;
+    }
+  }
+
+#contactMe{
+  color: $gray-400;
 }
