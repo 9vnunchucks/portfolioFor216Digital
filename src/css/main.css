@@ -8866,6 +8866,16 @@ a.text-dark:hover, a.text-dark:focus {
   height: 55vh;
 }
 
+.standardHeight2 {
+  height: 55vh;
+}
+
+@media (max-width: 768px) {
+  .standardHeight2 {
+    height: 110vh;
+  }
+}
+
 /*banner image*/
 #hero {
   background: url("/assets/puzzle.png") no-repeat;
@@ -8964,17 +8974,17 @@ a.text-dark:hover, a.text-dark:focus {
 
 /*about me section - illustrate photoshop/gimp skills*/
 #aboutMe {
-  background: linear-gradient(#dee2e6, rgba(176, 215, 252, 0.75)), url("/assets/wood.jpg") no-repeat;
+  background: linear-gradient(rgba(206, 212, 218, 0.4), #b0d7fc), url("/assets/wood.jpg") no-repeat;
   background-size: cover;
-  position: absolute;
-  height: 55vh;
   position: relative;
   z-index: -2;
 }
 
 .position-absolute {
-  right: 7%;
+  right: 10%;
+  bottom: 7%;
   max-height: 50vh;
+  position: absolute;
   z-index: -1;
   filter: grayscale(80%);
 }
@@ -9063,7 +9073,7 @@ body, body * {
 .parallax :nth-child(6) {
   transform: translateZ(0.5px) scale(0.5);
   z-index: 500;
-  top: 30vh;
+  top: 23vh;
   right: 20vw;
 }
 
@@ -9071,28 +9081,28 @@ body, body * {
   transform: translateZ(-1px) scale(2);
   z-index: -1000;
   top: 27vh;
-  right: 5vw;
+  right: 9vw;
 }
 
 .parallax :nth-child(8) {
   transform: translateZ(-0.4px) scale(1.4);
   z-index: -400;
   top: 25vh;
-  right: 30vw;
+  right: 34vw;
 }
 
 .parallax :nth-child(9) {
   transform: translateZ(0.4px) scale(0.6);
   z-index: 400;
   bottom: 40vh;
-  right: 20vw;
+  right: 22vw;
 }
 
 .parallax :nth-child(10) {
   transform: translateZ(-1px) scale(2);
   z-index: -1000;
-  top: -10vh;
-  left: -10vw;
+  top: 0;
+  left: -5vw;
 }
 
 .parallax > * {
